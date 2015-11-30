@@ -30,12 +30,33 @@ yo webtask
 ```
 ├── src/
 │   ├── [taskname].js
-├── README.md
-├── quickstart.md
-├── package.json
 ├── .editorconfig
 ├── .gitignore
+├── package.json
+├── quickstart.md
+├── README.md
 ```
+
+#### Express Application
+
+```
+├── config/
+│   ├── api.config.js
+│   ├── default.config.js
+│   ├── webtask.config.js
+├── src/
+│   ├── api.js
+│   ├── server.js
+│   ├── webtask.js
+├── .editorconfig
+├── .gitignore
+├── gulpfile.js
+├── package.json
+├── quickstart.md
+├── README.md
+```
+
+Note: For more information please read [Webtask API Boilerplate](https://github.com/AlejoFernandez/webtask-api-boilerplate)
 
 ## Issue Reporting
 

@@ -114,7 +114,7 @@ module.exports = yeoman.generators.Base.extend({
         this._writeVanilla();
         break;
       case 'wt-express':
-        this._writeVanilla();
+        this._writeExpress();
         break;
       case 'wt-restify':
         this._writeVanilla();
@@ -137,6 +137,25 @@ module.exports = yeoman.generators.Base.extend({
     this.template(this.sourceRoot() + '/quickstart.md', context.name + '/quickstart.md', context);
     this.template(this.sourceRoot() + '/.gitignore',    context.name + '/.gitignore', context);
     this.template(this.sourceRoot() + '/.editorconfig', context.name + '/.editorconfig', context);
+  },
+
+  _writeExpress: function () {
+    var context = this.webtaskConfig;
+
+    this.template(this.sourceRoot() + '/config/api.config.js',     context.name + '/config/api.config.js', context);
+    this.template(this.sourceRoot() + '/config/default.config.js', context.name + '/config/default.config.js', context);
+    this.template(this.sourceRoot() + '/config/webtask.config.js', context.name + '/config/webtask.config.js', context);
+
+    this.template(this.sourceRoot() + '/src/api.js',     context.name + '/src/api.js', context);
+    this.template(this.sourceRoot() + '/src/server.js',  context.name + '/src/server.js', context);
+    this.template(this.sourceRoot() + '/src/webtask.js', context.name + '/src/webtask.js', context);
+
+    this.template(this.sourceRoot() + '/.editorconfig', context.name + '/.editorconfig', context);
+    this.template(this.sourceRoot() + '/.gitignore',    context.name + '/.gitignore', context);
+    this.template(this.sourceRoot() + '/gulpfile.js',   context.name + '/gulpfile.js', context);
+    this.template(this.sourceRoot() + '/package.json',  context.name + '/package.json', context);
+    this.template(this.sourceRoot() + '/quickstart.md', context.name + '/quickstart.md', context);
+    this.template(this.sourceRoot() + '/README.md',     context.name + '/README.md', context);
   },
 
   // Installation
