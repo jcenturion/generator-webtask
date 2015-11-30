@@ -1,7 +1,5 @@
 # Pandora
 
-Note: The generator was not yet published to NPM. To start using it you have to use [NPM Link](https://docs.npmjs.com/cli/link).
-
 ### Yo Webtask - Webtask starter kit generator
 
 We have written a Yeoman generator to help get you started with Webtasks.
