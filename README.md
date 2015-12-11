@@ -1,4 +1,8 @@
-# Pandora
+# generator-webtask
+
+[![NPM version](http://img.shields.io/npm/v/generator-webtask.svg)](https://www.npmjs.com/package/generator-webtask)
+[![Dependency Status](https://img.shields.io/david/jcenturion/generator-webtask.svg?label=deps)](https://david-dm.org/jcenturion/generator-webtask)
+[![devDependency Status](https://img.shields.io/david/dev/jcenturion/generator-webtask.svg?label=devDeps)](https://david-dm.org/jcenturion/generator-webtask#info=devDependencies)
 
 ### Yo Webtask - Webtask starter kit generator
 
