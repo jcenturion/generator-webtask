@@ -129,13 +129,14 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   _writeVanilla: function () {
+    console.log('webtaskConfig', this.webtaskConfig);
     var context = this.webtaskConfig;
 
     this.template(this.sourceRoot() + '/task.js',       path.join(context.name, 'src', context.name + '.js'), context);
     this.template(this.sourceRoot() + '/package.json',  context.name + '/package.json', context);
     this.template(this.sourceRoot() + '/README.md',     context.name + '/README.md', context);
     this.template(this.sourceRoot() + '/quickstart.md', context.name + '/quickstart.md', context);
-    this.template(this.sourceRoot() + '/.gitignore',    context.name + '/.gitignore', context);
+    this.template(this.sourceRoot() + '/gitignore',    context.name + '/.gitignore', context);
     this.template(this.sourceRoot() + '/.editorconfig', context.name + '/.editorconfig', context);
   },
 
@@ -151,7 +152,7 @@ module.exports = yeoman.generators.Base.extend({
     this.template(this.sourceRoot() + '/src/webtask.js', context.name + '/src/webtask.js', context);
 
     this.template(this.sourceRoot() + '/.editorconfig', context.name + '/.editorconfig', context);
-    this.template(this.sourceRoot() + '/.gitignore',    context.name + '/.gitignore', context);
+    this.template(this.sourceRoot() + '/gitignore',    context.name + '/.gitignore', context);
     this.template(this.sourceRoot() + '/gulpfile.js',   context.name + '/gulpfile.js', context);
     this.template(this.sourceRoot() + '/package.json',  context.name + '/package.json', context);
     this.template(this.sourceRoot() + '/quickstart.md', context.name + '/quickstart.md', context);
