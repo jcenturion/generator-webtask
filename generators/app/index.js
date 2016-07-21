@@ -129,7 +129,6 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   _writeVanilla: function () {
-    console.log('webtaskConfig', this.webtaskConfig);
     var context = this.webtaskConfig;
 
     this.template(this.sourceRoot() + '/task.js',       path.join(context.name, 'src', context.name + '.js'), context);
